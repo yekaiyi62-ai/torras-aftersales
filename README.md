@@ -207,7 +207,48 @@ torras-aftersales/
 
 ## 安装方式
 
-### 方法一：从 GitHub 下载
+### 方法一：一键安装（推荐）
+
+如果另一台电脑已经安装 Node.js/npm，可以像安装女娲 Skill 一样使用 `npx skills add`：
+
+```bash
+npx skills add yekaiyi62-ai/torras-aftersales -g -a claude-code
+```
+
+也可以使用完整 GitHub 地址：
+
+```bash
+npx skills add https://github.com/yekaiyi62-ai/torras-aftersales -g -a claude-code
+```
+
+参数说明：
+
+- `-g`：安装到全局 skills 目录，所有 Claude Code 项目都能使用。
+- `-a claude-code`：指定安装给 Claude Code。
+
+安装后检查：
+
+```bash
+ls ~/.claude/skills/torras-aftersales
+```
+
+应能看到：
+
+```text
+SKILL.md
+README.md
+members
+references
+shared
+```
+
+更新 Skill：
+
+```bash
+npx skills update
+```
+
+### 方法二：从 GitHub 下载
 
 1. 在 GitHub 上下载或 clone 本仓库。
 2. 确保文件夹名为：
@@ -219,7 +260,7 @@ torras-aftersales
 3. 将整个文件夹放到 Claude Code 的 skills 目录中。
 4. 打开 Claude Code，新建对话后直接使用。
 
-### 方法二：GitHub Desktop 同步
+### 方法三：GitHub Desktop 同步
 
 1. 在 GitHub Desktop 中 clone 这个仓库。
 2. 本地仓库目录就是完整 Skill 目录。
